@@ -2,10 +2,11 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
 }
-
-h1 {
-    color: blue;
+img {
+    max-width: 100%;
+    height: auto;
 }
+
 
 #movingButton {
     position: absolute;
