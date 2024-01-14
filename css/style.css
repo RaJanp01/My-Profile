@@ -1,47 +1,48 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers children horizontally in the container */
-    justify-content: flex-start; /* Aligns children to the start of the container vertically */
-    min-height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Removes default margin */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: block; /* Changed from flex to block */
 }
-.container {
-    display: flex;
-}
+
 #container {
     width: 80%;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
+    max-width: 600px; /* Adjust this as needed */
+    margin: 0 auto; /* Centers the container */
+    display: flex; /* Use flex here if you want to use flexbox properties */
+    flex-direction: column;
+    align-items: center; /* This will center the cards horizontally */
 }
 
 .card {
-    width: 35vw;  /* Width of the card */
-    height: 30vw; /* Height of the card, set equal to the width for a square */
-    margin: 20px auto; /* Centers the card with a margin */
+    width: calc(100% - 40px); /* Adjust width, considering padding */
+    margin: 20px 0; /* Vertical margin, no horizontal margin */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.99s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
-    overflow: hidden; /* In case content exceeds the square area */
-    /* Rest of your styles */
-}
-
-/* Animation on scroll */
-.card.show {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Keeps content within the card /
+    height: 300px; / Fixed height for square cards; adjust as needed */
+    }
+    
+    /* Animation on scroll */
+    .card.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-@media only screen and (max-width: 600px) {
-    .card {
-        width: 80vw;
-        height: 80vw; /* Adjust the size for smaller screens */
     }
-}
+    
+    @media only screen and (max-width: 600px) {
+    #container {
+    width: 95%; /* Increase the width on smaller screens /
+    }
+    .card {
+    width: calc(100% - 40px); / Adjust width, considering padding /
+    height: auto; / Height can be auto to maintain content integrity on smaller screens /
+    margin-bottom: 20px; / Add margin at the bottom for spacing */
+    }
+    }
