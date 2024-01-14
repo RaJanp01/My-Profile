@@ -37,12 +37,12 @@ body {
     }
     
     @media only screen and (max-width: 600px) {
-    #container {
-    width: 95%; /* Increase the width on smaller screens /
-    }
-    .card {
-    width: calc(100% - 40px); / Adjust width, considering padding /
-    height: auto; / Height can be auto to maintain content integrity on smaller screens /
-    margin-bottom: 20px; / Add margin at the bottom for spacing */
-    }
-    }
+        #container {
+        width: 95%; 
+        }
+        .card {
+        width: calc(100% - 40px); 
+        height: auto;
+        margin-bottom: 20px; 
+        }
+        }
