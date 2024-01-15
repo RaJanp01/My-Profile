@@ -22,3 +22,6 @@ function isElementInViewport(el) {
         rect.bottom >= 0 
     );
 }
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
