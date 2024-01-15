@@ -1,48 +1,133 @@
+@media only screen and (max-width: 600px) {
+    #container {
+        width: 95%;
+    }
+
+    .card {
+        width: calc(100% - 40px);
+        height: auto;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        margin: 10px 0;
+    }
+}
+
 body {
     text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: block; /* Changed from flex to block */
+    display: block;
+    background: linear-gradient(to right, #3494e6,rgb(215, 181, 181), #ec6ead);
 }
 
 #container {
     width: 80%;
-    max-width: 600px; /* Adjust this as needed */
-    margin: 0 auto; /* Centers the container */
-    display: flex; /* Use flex here if you want to use flexbox properties */
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-    align-items: center; /* This will center the cards horizontally */
+    align-items: center;
+    
 }
 
 .card {
-    width: calc(100% - 40px); /* Adjust width, considering padding */
-    margin: 20px 0; /* Vertical margin, no horizontal margin */
+    width: calc(100% - 40px);
+    margin: 20px 0;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.99s ease-in-out, transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden; /* Keeps content within the card /
-    height: 300px; / Fixed height for square cards; adjust as needed */
-    }
-    
-    /* Animation on scroll */
-    .card.show {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card.show {
     opacity: 1;
     transform: translateY(0);
-    }
-    
-    @media only screen and (max-width: 600px) {
-        #container {
-        width: 95%; 
-        }
-        .card {
-        width: calc(100% - 40px); 
-        height: auto;
-        margin-bottom: 20px; 
-        }
-        }
+}
+
+/* Resetting default list styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the navigation links */
+nav a {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Changing link color on hover */
+nav a:hover {
+    color: red;
+    border-bottom: 2px solid #555;
+    transition: border-bottom 0.3s ease-in-out;
+
+}
+
+/* Styling the navigation bar */
+nav {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+/* Centering the navigation links */
+nav ul {
+    text-align: center;
+}
+
+/* Adding some space around each link */
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+nav {
+    background: inherit;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background: inherit;
+    color: #000000; /* Text color in the footer */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #ddd; /* Add a top border */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #000000; /* Link color in the footer */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: white;
+}
